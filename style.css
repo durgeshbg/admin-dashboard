@@ -21,7 +21,7 @@ body {
 	grid-template-rows: 1fr 4.5fr;
 	height: 100vh;
 }
-
+/* Dashboard */
 .dashboard {
 	color: white;
 	font-weight: bolder;
@@ -55,7 +55,7 @@ body {
 	height: 25px;
 	fill: #fff;
 }
-
+/* Header */
 header {
 	padding: 20px 40px;
 	grid-area: 1 / 2 / 2 / 3;
@@ -123,31 +123,38 @@ header .controls-2 button {
 	background-color: var(--blue);
 	color: #fff;
 }
-
+/* Main */
 main {
 	margin: 2rem 1rem;
 	display: grid;
-	grid-template-columns: 3fr 1fr;
+	grid-template: 1fr 1fr / 3fr 1fr;
 	gap: 2rem;
 }
+/* Projects */
 .projects {
-	grid-row: 1 / -3;
+	grid-area: 1 / 1 / 3 / 2;
 }
-.projects > h3 {
-	margin-bottom: 20px;
+.projects > h3,
+.announcements > h3,
+.trending > h3 {
+	margin-bottom: 20px;  /* Projects Announcements Trending heading*/
 }
 .cards {
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
 	gap: 2rem;
 }
-.cards .card {
+.card {
 	background-color: #fff;
 	border-radius: 10px;
 	border-left: 10px solid #fb923c;
 	padding: 20px;
 }
-.cards .controls {
+.card p {
+	color: rgba(0, 0, 0, 0.5);
+}
+
+.card .controls {
 	list-style: none;
 	margin-top: 30px;
 	display: flex;
@@ -159,10 +166,23 @@ main {
 	width: 30px;
 	height: 30px;
 }
-
-main .announcements {
-	background-color: green;
+/* Announcements */
+.a-list {
+	background-color: #fff;
+	border-radius: 10px;
+	padding: 30px;
+	width: 35ch;
+}
+.a-item {
+	border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+	margin-bottom: 10px;
+	padding-bottom: 10px;
+}
+.a-item p {
+	font-size: 0.8rem;
+	color: rgba(0, 0, 0, 0.5);
 }
 main .trending {
 	background-color: yellow;
+	grid-area: 2 / 2 / 3 / 3;
 }
