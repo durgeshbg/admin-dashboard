@@ -60,6 +60,68 @@ header {
 	padding: 20px 40px;
 	grid-area: 1 / 2 / 2 / 3;
 	background-color: #fff;
+	display: grid;
+	grid-template: 1fr 1fr / 2fr 1fr;
+}
+.search {
+	display: grid;
+	grid-template-columns: auto 1fr;
+	align-items: center;
+	gap: 15px;
+}
+.search input {
+	border: none;
+	border-radius: 20px;
+	height: 30px;
+	background-color: rgb(227, 232, 239);
+	padding: 10px;
+}
+header .icon,
+header .alerts {
+	fill: #000;
+	height: 25px;
+	width: 25px;
+}
+header .controls-1 {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 30px;
+}
+.profile {
+	width: max-content;
+	font-weight: 900;
+	display: flex;
+	align-items: center;
+	gap: 28px;
+}
+.profile img {
+	background-color: rgb(228, 187, 74);
+	border-radius: 50%;
+	padding: 8px;
+	width: 50px;
+	height: 50px;
+}
+.profile.big img {
+	width: 70px;
+	height: 70px;
+}
+.profile.big .username {
+	font-size: 1.4rem;
+}
+header .controls-2 {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 10px;
+}
+header .controls-2 button {
+	font-weight: bolder;
+	padding: 8px 30px;
+	border: none;
+	border-radius: 20px;
+	background-color: var(--blue);
+	color: #fff;
 }
 
 main {
