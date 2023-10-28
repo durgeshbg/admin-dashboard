@@ -125,5 +125,44 @@ header .controls-2 button {
 }
 
 main {
-	background-color: orange;
+	margin: 2rem 1rem;
+	display: grid;
+	grid-template-columns: 3fr 1fr;
+	gap: 2rem;
+}
+.projects {
+	grid-row: 1 / -3;
+}
+.projects > h3 {
+	margin-bottom: 20px;
+}
+.cards {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+	gap: 2rem;
+}
+.cards .card {
+	background-color: #fff;
+	border-radius: 10px;
+	border-left: 10px solid #fb923c;
+	padding: 20px;
+}
+.cards .controls {
+	list-style: none;
+	margin-top: 30px;
+	display: flex;
+	justify-content: flex-end;
+	align-items: flex-end;
+	gap: 20px;
+}
+.controls svg {
+	width: 30px;
+	height: 30px;
+}
+
+main .announcements {
+	background-color: green;
+}
+main .trending {
+	background-color: yellow;
 }
